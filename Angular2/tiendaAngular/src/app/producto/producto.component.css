@@ -1,0 +1,23 @@
+.productoContainer{
+  background-color: white;
+  border-radius: 8px
+}
+
+.productoContainer img{
+  margin: 10px;
+  width: 100%
+}
+
+.productoContainer h3{
+  margin-left: 10px
+}
+
+.chip{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.productoContainer a{
+  color:black;
+  margin-left: 10px
+}

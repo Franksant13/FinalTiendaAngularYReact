@@ -1,0 +1,24 @@
+
+.mainProductosDiv{
+  background-color: white;
+  border-radius: 8px;
+  margin-bottom: 150px;
+}
+
+.containerProductos{
+  height: 450px
+}
+
+.addCarrito{
+  display: flex;
+}
+
+.addCarrito input{
+  width:50%;
+  margin-left:10px;
+}
+
+.tituloProducto{
+  background-color: hsla(98, 100%, 0%, 0.5);
+  border-radius: 8px
+}

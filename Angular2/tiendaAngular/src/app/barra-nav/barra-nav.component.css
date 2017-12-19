@@ -1,0 +1,27 @@
+.brand-logo{
+  color:black;
+}
+#nav-mobile a{
+  color:black;
+}
+.nav-wrapper{
+  border-radius: 0px 0px 10px 10px
+}
+nav{
+  background-color: transparent
+}
+#numIcon{
+  color:white;
+  position: absolute;
+  top:30px;
+  right:65px;
+  background-color: red;
+  height:20px;
+  width: 20px;
+  border-radius: 9px
+
+}
+#numIcon p{
+  margin-top:-20px;
+  margin-left: 6px
+}

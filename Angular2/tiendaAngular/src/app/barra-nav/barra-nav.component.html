@@ -1,0 +1,10 @@
+<nav>
+  <div class="nav-wrapper grey lighten-5">
+    <a class="brand-logo">La Bodega</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a [routerLink]="['tienda']" ><i class="material-icons">apps</i></a></li>
+      <li><a [routerLink]="['carrito']"><i class="material-icons">shopping_cart</i></a> <div id="numIcon" *ngIf="showNumber"><p>{{message}}</p></div></li>
+      <li><a [routerLink]="['']" (click)="hideBar()"><i class="material-icons">redo</i></a></li>
+    </ul>
+  </div>
+</nav>

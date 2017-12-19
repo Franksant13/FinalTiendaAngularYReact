@@ -1,0 +1,24 @@
+<div id="mainDiv" class="row">
+
+  <form class="col s4 offset-s4" (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
+
+    <div class="input-field col s12">
+      <input placeholder="Mail Registrado" id="first_name" type="text" class="validate" ngModel name="usuario" required pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?">
+      <label for="first_name">Usuario</label>
+    </div>
+
+    <div class="input-field col s12">
+      <input placeholder="Contraseña" id="last_name" type="password" class="validate" required ngModel name="pass">
+      <label for="last_name">Contraseña</label>
+    </div>
+
+    <div class="input-field col s6">
+      <button>Ingresar</button>
+    </div>
+
+    <div class="input-field col s6">
+      <label *ngIf="show">Credenciales Incorrectas</label>
+    </div>
+  </form>
+
+</div>

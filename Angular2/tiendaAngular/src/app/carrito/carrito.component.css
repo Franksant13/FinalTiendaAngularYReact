@@ -1,0 +1,11 @@
+.container{
+  background-color: white
+}
+.productosCarrito{
+  margin-left: 15px;
+  border-style: solid;
+  border-width: 1px
+}
+.productosCarrito img{
+  width: 100%
+}

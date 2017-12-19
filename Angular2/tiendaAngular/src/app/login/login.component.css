@@ -1,0 +1,15 @@
+#mainDiv{
+  background: url('../assets/login-fondo.jpg');
+  background-size: cover;
+  height: 847px;
+}
+
+#mainDiv form{
+  background-color: hsla(98, 100%, 0%, 0.7);
+  margin-top: 150px;
+  padding: 20px;
+}
+
+.input-field input{
+  color: white !important;
+}

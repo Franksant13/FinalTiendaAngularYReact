@@ -1,0 +1,86 @@
+  <div class="container" style="padding-bottom:100px;">
+
+    <div class="row mainProductosDiv">
+
+      <div class="col s9">
+        <h4>Catalogo de Productos</h4>
+      </div>
+
+      <div class="col s3">
+        <form>
+          <div class="input-field col s12">
+            <input placeholder="Buscar Producto" id="first_name" type="text" class="validate" required (input)="onSearchChange($event.target.value)">
+            <label for="first_name">Que estas buscando?</label>
+          </div>
+        </form>
+      </div>
+
+      <!-- //Todos los productos de manera inicial -->
+      <div class="col s12" *ngIf="show">
+
+        <div class="col s3 containerProductos" *ngFor="let entry of productosNombres">
+          <div class="card">
+
+           <div class="card-image">
+             <img src={{entry.imagen}}>
+             <span class="card-title tituloProducto">{{entry.nombreProducto}}</span>
+           </div>
+
+           <div class="card-content">
+
+             <p><strong>Precio:</strong> $ {{entry.precio}}</p>
+             <p><strong>Unidades Disponibles:</strong> {{entry.unidadesDisp}}</p>
+             <br>
+             <a (click)="abrirProducto(entry.nombreProducto)" class="waves-effect  blue darken-3 btn">Ver Mas</a>
+             <br>
+             <br>
+             <div class="addCarrito">
+               <a (click)="agregarCarrito(cantidadInput.value, nombreProduc.value, imgProduc.value, precioProduc.value)" class="btn-floating btn-large waves-effect amber darken-1"><i class="material-icons">add</i></a>
+               <input type="number" min="1" value="1" #cantidadInput>
+               <input type="hidden" value={{entry.nombreProducto}} #nombreProduc>
+               <input type="hidden" value={{entry.imagen}} #imgProduc>
+               <input type="hidden" value={{entry.precio}} #precioProduc>
+             </div>
+
+           </div>
+
+         </div>
+        </div>
+      </div>
+
+      <!-- //Todos los productos usando el buscador -->
+      <div class="col s12" *ngIf="!show">
+        <div class="col s3 containerProductos" *ngFor="let entry of productosNombresFiltro">
+          <div class="card">
+
+           <div class="card-image">
+             <img src={{entry.imagen}}>
+             <span class="card-title tituloProducto">{{entry.nombreProducto}}</span>
+           </div>
+
+           <div class="card-content">
+
+             <p><strong>Precio:</strong> $ {{entry.precio}}</p>
+             <p><strong>Unidades Disponibles:</strong> {{entry.unidadesDisp}}</p>
+             <br>
+             <a class="waves-effect  blue darken-3 btn">Ver Mas</a>
+             <br>
+             <br>
+             <div class="addCarrito">
+               <a (click)="agregarCarrito(cantidadInput.value, nombreProduc.value, imgProduc.value, precioProduc.value)" class="btn-floating btn-large waves-effect amber darken-1"><i class="material-icons">add</i></a>
+               <input type="number" min="1" value="1" #cantidadInput>
+               <input type="hidden" value={{entry.nombreProducto}} #nombreProduc>
+               <input type="hidden" value={{entry.imagen}} #imgProduc>
+               <input type="hidden" value={{entry.precio}} #precioProduc>
+             </div>
+
+           </div>
+
+         </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  <div>
